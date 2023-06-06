@@ -1,0 +1,111 @@
+---
+Author: "Aniket Chakraborty"
+Last Update: "07.06.2023 or 7th June 2023"
+title: "Project on EXAM_SCORE"
+output: html_notebook
+---
+```{r Installing & loading packages}
+# Here we install and load all required packages
+install.packages("tidyverse")
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r Reading the file}
+# Here we will read the file using read.csv() function
+score_df <- read_csv("Exam_Score.csv")
+```
+
+
+```{r Previewing the data frame}
+# Getting preview of the data frame using View() function
+View(score_df)
+```
+
+
+```{r Getting structure of the data frame}
+# Getting the structure of the data frame using str() function
+str(score_df)
+```
+```{r Getting column names of the data frame}
+# Getting column names of the data frame using colnames() function
+colnames(score_df)
+```
+```{r Getting summary statistics of a data frame}
+# Getting summary statitics of the data frame
+summary(score_df)
+# We can also use the glimpse() function
+```
+```{r Getting number of rows and columns of the data frame}
+nrow(score_df)
+ncol(score_df)
+```
+
+```{r Using select function}
+# Selecting the Total_Marks and Percentage Column
+score_df %>% select(Total_Marks,Percentage) %>% arrange(Total_Marks)
+# arrange() will automatically arrange in ascending order
+# To make it in descending order we use arrange(desc(Total_Marks)) command
+```
+```{r Using filter() function}
+# Filtering rows having good remarks and maths_score greater than or equal to 90
+score_df %>% filter(Remarks=='Good' & Maths_Score >=90)
+
+```
+```{r Using summarize() function}
+# Finding the mean and minimum maths_marks and maximum math_marks
+score_df %>% summarize(maths_mean=mean(Maths_Score),math_min=min(Maths_Score),
+                      math_max=max(Maths_Score))
+```
+```{r Creating a new variable using mutate() function}
+# Creating a new column called geography _marks and naming it as updated_score_df
+updated_score_df <- score_df %>% mutate(Geography_Score= (Maths_Score-10))
+head(updated_score_df,5)
+# The new variable name is Geography_Score
+# We obtain the values of the variable by subtracting 10 from Maths_Score
+```
+```{r Checking the column names of the latest data frame}
+colnames(updated_score_df)
+```
+```{r Plotting using ggplot2 library-1}
+# Plotting scatter plot for Science_Marks vs Maths_Score and customizing it
+p=ggplot(data=updated_score_df)+
+geom_point(mapping=aes(x=Science_Score,y=Maths_Score,color=Gender),alpha=0.8,size=5)+
+facet_wrap(~Gender)+
+labs(title="Science_Score vs Maths_Score ",x='Science_Score',y='Maths_Score')
+p
+```
+```{r Plotting using ggplot2 library-2}
+# Plotting scatter plot for English_Marks vs Bengali_Score and customizing it
+p1=ggplot(data=updated_score_df)+
+geom_point(mapping=aes(x=English_Score,y=Bengali_Score,color=Gender),alpha=0.8,size=5)+
+facet_wrap(~Gender)+
+labs(title="English_Score vs Bengali_Score ",x='English_Score',y='Bengali_Score')
+p1
+```
+```{r Plotting using ggplot2 library-3}
+# Plotting scatter plot for Science_Marks vs Geography_Marks and customizing it
+p2=ggplot(data=updated_score_df)+
+geom_point(mapping=aes(x=Science_Score,y=Geography_Score,color=Gender),alpha=0.8,size=5)+
+facet_wrap(~Gender)+
+labs(title='Science_Marks vs Geography_Marks',x='Science_Score',y='Geography_Score')
+p2
+```
+```{r Plotting using ggplot2 library-4}
+# Plot a bar graph of remarks for different age students labeled with gender
+p3=ggplot(data=updated_score_df)+
+geom_bar(mapping=aes(x=Remarks,color=Gender),alpha=0.8,size=5,fill='blue')+facet_wrap(~Age)
+p3
+```
+
+
+
+
+
+
+
+
+
+
