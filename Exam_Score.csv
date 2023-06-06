@@ -1,0 +1,26 @@
+Roll_Number,First_Nmae,Last_Nmae,Age,Gender,Maths_Score,Science_Score,English_Score,Bengali_Score,Total_Marks,Out_Of,Percentage,Remarks
+A_25,Aniket,Chakraborty,21,Male,98,58,98,99,353,400,88.25,Outsanding
+A_19,Nayan,Kumar,20,Male,97,78,98,98,371,400,92.75,Excellent
+A_8,Parthib,Pal,22,Male,95,89,58,95,337,400,84.25,Outsanding
+A_17,Soumyadeep,Sarkar,21,Male,85,78,78,96,337,400,84.25,Outsanding
+A_10,Ujjal,Pattanayek,20,Male,78,85,78,96,337,400,84.25,Outsanding
+A_24,Swastika,Chaterjee,19,Female,79,96,98,98,371,400,92.75,Excellent
+A_16,Aishi,Pramanik,21,Female,96,89,58,52,295,400,73.75,Good
+A_9,Romit,Majumdar,22,Male,58,99,85,78,320,400,80,Outsanding
+A_11,Suparna,Roy,20,Female,48,98,58,85,289,400,72.25,Good
+A_12,Sonali,Seth,19,Female,78,97,88,52,315,400,78.75,Good
+A_13,Sanket,Modak,19,Male,96,95,87,56,334,400,83.5,Outsanding
+A_14,Soptorshi,Maji,21,Male,91,96,85,87,359,400,89.75,Outsanding
+A_1,Riya,Sen,21,Female,90,54,98,84,326,400,81.5,Outsanding
+A_15,Partha,Bera,20,Male,78,78,92,85,333,400,83.25,Outsanding
+A_6,Lilly,Sharma,22,Female,87,87,90,52,316,400,79,Good
+A_2,Anindita,Adhikari,21,Female,45,96,84,84,309,400,77.25,Good
+A_5,Tista,Chakraborty,20,Female,58,69,87,96,310,400,77.5,Good
+A_3,Sumit,Makur,20,Male,96,48,88,93,325,400,81.25,Outsanding
+A_4,Agniva,Banerjee,19,Male,93,84,92,63,332,400,83,Outsanding
+A_7,Souvik,Pal,19,Male,99,87,93,52,331,400,82.75,Outsanding
+A_23,Koushik,Ghosh,18,Male,92,99,98,78,367,400,91.75,Excellent
+A_20,Soumya,Bhaduri,20,Male,52,98,74,89,313,400,78.25,Good
+A_18,Sakil,Sardar,21,Male,87,97,79,85,348,400,87,Outsanding
+A_22,Kuntal ,Bhoumik,22,Male,88,98,48,85,319,400,79.75,Good
+A_21,Kaberi,Mondal,19,Female,89,95,85,96,365,400,91.25,Excellent
